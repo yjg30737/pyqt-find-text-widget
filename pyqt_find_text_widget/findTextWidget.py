@@ -58,11 +58,16 @@ class FindTextWidget(QWidget):
         for btn in btns:
             btn.setStyleSheet(btn_css_code)
 
-        self.__prevBtn.setIcon(QIcon('ico/prev.png'))
-        self.__nextBtn.setIcon(QIcon('ico/next.png'))
-        self.__caseBtn.setIcon(QIcon('ico/case.png'))
-        self.__regexBtn.setIcon(QIcon('ico/regex.png'))
-        closeBtn.setIcon(QIcon('ico/close.png'))
+        self.__prevBtn.setIcon(QIcon(os.path.join(os.path.dirname(os.path.relpath(__file__, os.getcwd())),
+                                     r'ico/prev.png')))
+        self.__nextBtn.setIcon(QIcon(os.path.join(os.path.dirname(os.path.relpath(__file__, os.getcwd())),
+                                     r'ico/next.png')))
+        self.__caseBtn.setIcon(QIcon(os.path.join(os.path.dirname(os.path.relpath(__file__, os.getcwd())),
+                                     r'ico/case.png')))
+        self.__regexBtn.setIcon(QIcon(os.path.join(os.path.dirname(os.path.relpath(__file__, os.getcwd())),
+                                     r'ico/regex.png')))
+        closeBtn.setIcon(QIcon(os.path.join(os.path.dirname(os.path.relpath(__file__, os.getcwd())),
+                                     r'ico/close.png')))
 
         self.__prevBtn.setToolTip('Previous Occurrence')
         self.__nextBtn.setToolTip('Next Occurrence')

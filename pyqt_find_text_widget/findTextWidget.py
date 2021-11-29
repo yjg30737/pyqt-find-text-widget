@@ -47,8 +47,9 @@ class FindTextWidget(QWidget):
         closeBtn.setShortcut('Escape')
         closeBtn.clicked.connect(self.__close)
 
-        css_file_path = os.path.join(os.path.dirname(os.path.relpath(__file__, os.getcwd())),
-                                     r'style/button.css')
+        rel_dirname = os.path.dirname(os.path.relpath(__file__, os.getcwd()))
+
+        css_file_path = os.path.join(rel_dirname, r'style/button.css')
         css_file = open(css_file_path)
         btn_css_code = css_file.read()
         css_file.close()
@@ -58,16 +59,11 @@ class FindTextWidget(QWidget):
         for btn in btns:
             btn.setStyleSheet(btn_css_code)
 
-        self.__prevBtn.setIcon(QIcon(os.path.join(os.path.dirname(os.path.relpath(__file__, os.getcwd())),
-                                     r'ico/prev.png')))
-        self.__nextBtn.setIcon(QIcon(os.path.join(os.path.dirname(os.path.relpath(__file__, os.getcwd())),
-                                     r'ico/next.png')))
-        self.__caseBtn.setIcon(QIcon(os.path.join(os.path.dirname(os.path.relpath(__file__, os.getcwd())),
-                                     r'ico/case.png')))
-        self.__regexBtn.setIcon(QIcon(os.path.join(os.path.dirname(os.path.relpath(__file__, os.getcwd())),
-                                     r'ico/regex.png')))
-        closeBtn.setIcon(QIcon(os.path.join(os.path.dirname(os.path.relpath(__file__, os.getcwd())),
-                                     r'ico/close.png')))
+        self.__prevBtn.setIcon(QIcon(rel_dirname, r'ico/prev.png'))
+        self.__nextBtn.setIcon(QIcon(rel_dirname, r'ico/next.png'))
+        self.__caseBtn.setIcon(QIcon(rel_dirname, r'ico/case.png'))
+        self.__regexBtn.setIcon(QIcon(rel_dirname, r'ico/regex.png'))
+        closeBtn.setIcon(QIcon(rel_dirname, r'ico/close.png'))
 
         self.__prevBtn.setToolTip('Previous Occurrence')
         self.__nextBtn.setToolTip('Next Occurrence')

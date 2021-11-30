@@ -15,6 +15,9 @@ class FindTextWidget(QWidget):
     def __init__(self, widget: QWidget):
         super().__init__()
         self.__widgetToFind = widget
+
+        self.__widgetToFind.setStyleSheet('QTextEdit { selection-background-color: lightblue; selection-color: darkgreen; }')
+
         self.__selections_init()
         self.__initUi()
 

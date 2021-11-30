@@ -13,7 +13,7 @@ pip install git+https://github.com/yjg30737/pyqt-find-text-widget.git --upgrade
 * Previous, Next occurence
 * Match case
 * Regex
-* Open/close available
+* Providing prev, next, close signals
 
 ## Signal
 * prevClicked

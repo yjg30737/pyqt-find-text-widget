@@ -46,10 +46,6 @@ class FindTextWidget(QWidget):
         self.__regexBtn = QPushButton()
         self.__regexBtn.setCheckable(True)
 
-        closeBtn = QPushButton()
-        closeBtn.setShortcut('Escape')
-        closeBtn.clicked.connect(self.__close)
-
         rel_dirname = os.path.dirname(os.path.relpath(__file__, os.getcwd()))
 
         css_file_path = os.path.join(rel_dirname, r'style/button.css')
@@ -57,7 +53,7 @@ class FindTextWidget(QWidget):
         btn_css_code = css_file.read()
         css_file.close()
 
-        btns = [self.__prevBtn, self.__nextBtn, self.__caseBtn, self.__regexBtn, closeBtn]
+        btns = [self.__prevBtn, self.__nextBtn, self.__caseBtn, self.__regexBtn]
 
         for btn in btns:
             btn.setStyleSheet(btn_css_code)
@@ -66,13 +62,11 @@ class FindTextWidget(QWidget):
         self.__nextBtn.setIcon(QIcon(os.path.join(rel_dirname, r'ico/next.png')))
         self.__caseBtn.setIcon(QIcon(os.path.join(rel_dirname, r'ico/case.png')))
         self.__regexBtn.setIcon(QIcon(os.path.join(rel_dirname, r'ico/regex.png')))
-        closeBtn.setIcon(QIcon(os.path.join(rel_dirname, r'ico/close.png')))
 
         self.__prevBtn.setToolTip('Previous Occurrence')
         self.__nextBtn.setToolTip('Next Occurrence')
         self.__caseBtn.setToolTip('Match Case')
         self.__regexBtn.setToolTip('Regex')
-        closeBtn.setToolTip('Close')
 
         lay = QHBoxLayout()
         lay.addWidget(self.__lineEdit)
@@ -81,7 +75,6 @@ class FindTextWidget(QWidget):
         lay.addWidget(self.__nextBtn)
         lay.addWidget(self.__caseBtn)
         lay.addWidget(self.__regexBtn)
-        lay.addWidget(closeBtn)
         lay.setContentsMargins(0, 0, 0, 0)
 
         mainWidget = QWidget()

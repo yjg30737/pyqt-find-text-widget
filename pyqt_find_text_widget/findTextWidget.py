@@ -121,7 +121,7 @@ class FindTextWidget(QWidget):
         self.__selections_init()
         doc = self.__widgetToFind.document()
         fmt = QTextCharFormat()
-        fmt.setForeground(Qt.darkGreen)
+        fmt.setForeground(Qt.red)
         cur = QTextCursor()
         while True:
             if flags:

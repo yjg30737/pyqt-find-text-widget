@@ -9,6 +9,17 @@ PyQt5 >= 5.8
 pip install git+https://github.com/yjg30737/pyqt-find-text-widget.git --upgrade
 ```
 
+## Feature
+* Previous, Next occurence
+* Match case
+* Regex
+* Open/close available
+
+## Signal
+* prevClicked
+* nextClicked
+* closeSignal
+
 ## Usage
 I just give you one sweet code example
 ```python

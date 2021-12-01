@@ -18,7 +18,7 @@ class FindTextWidget(QWidget):
 
         self.__widgetToFind.setStyleSheet('QTextEdit { selection-background-color: lightblue; selection-color: red; }')
 
-        self.__selections_init()
+        self.__selectionsInit()
         self.__initUi()
 
     def __initUi(self):
@@ -106,12 +106,12 @@ class FindTextWidget(QWidget):
         self.__prevBtn.setEnabled(f)
         self.__nextBtn.setEnabled(f)
 
-    def __selections_init(self):
+    def __selectionsInit(self):
         self.__selections = []
         self.__selections_idx = -1
 
     def __findInit(self, text, flags=None):
-        self.__selections_init()
+        self.__selectionsInit()
         doc = self.__widgetToFind.document()
         fmt = QTextCharFormat()
         fmt.setForeground(Qt.red)
@@ -200,5 +200,5 @@ class FindTextWidget(QWidget):
 
         self.closeSignal.emit()
 
-    def get_line_edit(self):
+    def getLineEdit(self):
         return self.__lineEdit

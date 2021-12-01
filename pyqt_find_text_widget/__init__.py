@@ -1,1 +1,1 @@
-from .findTextWidget import FindTextWidget
+from .findTextWidget import *

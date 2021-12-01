@@ -202,3 +202,6 @@ class FindTextWidget(QWidget):
 
     def getLineEdit(self):
         return self.__lineEdit
+
+    def setLineEdit(self, text: str):
+        self.__lineEdit.setText(text)

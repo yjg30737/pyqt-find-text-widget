@@ -13,6 +13,6 @@ setup(
     url='https://github.com/yjg30737/pyqt-find-text-widget.git',
     install_requires=[
         'PyQt5>=5.8',
-        'pyqt-resource-helpee @ git+https://git@github.com/yjg30737/pyqt-resource-helpee.git@main'
+        'pyqt-resource-helper @ git+https://git@github.com/yjg30737/pyqt-resource-helper.git@main'
     ]
 )

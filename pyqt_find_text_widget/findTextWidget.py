@@ -5,6 +5,8 @@ from PyQt5.QtGui import QTextCursor, QTextCharFormat, QTextDocument, QIcon
 from PyQt5.QtWidgets import QWidget, QPushButton, QTextBrowser, QLabel, \
     QHBoxLayout, QGridLayout, QLineEdit, QMessageBox
 
+from pyqt_resource_helper.pyqtResourceHelper import PyQtResourceHelper
+
 
 class FindTextWidget(QWidget):
 
@@ -46,22 +48,10 @@ class FindTextWidget(QWidget):
         self.__regexBtn = QPushButton()
         self.__regexBtn.setCheckable(True)
 
-        rel_dirname = os.path.dirname(os.path.relpath(__file__, os.getcwd()))
-
-        css_file_path = os.path.join(rel_dirname, r'style/button.css')
-        css_file = open(css_file_path)
-        btn_css_code = css_file.read()
-        css_file.close()
-
         btns = [self.__prevBtn, self.__nextBtn, self.__caseBtn, self.__regexBtn]
 
-        for btn in btns:
-            btn.setStyleSheet(btn_css_code)
-
-        self.__prevBtn.setIcon(QIcon(os.path.join(rel_dirname, r'ico/prev.png')))
-        self.__nextBtn.setIcon(QIcon(os.path.join(rel_dirname, r'ico/next.png')))
-        self.__caseBtn.setIcon(QIcon(os.path.join(rel_dirname, r'ico/case.png')))
-        self.__regexBtn.setIcon(QIcon(os.path.join(rel_dirname, r'ico/regex.png')))
+        PyQtResourceHelper.setStyleSheet(btns, ['style/button.css'])
+        PyQtResourceHelper.setIcon(btns, ['ico/prev.png', 'ico/next.png', 'ico/case.png', 'ico/regex.png'])
 
         self.__prevBtn.setToolTip('Previous Occurrence')
         self.__nextBtn.setToolTip('Next Occurrence')

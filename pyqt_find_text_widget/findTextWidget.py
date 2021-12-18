@@ -194,6 +194,7 @@ class FindTextWidget(QWidget):
         self.__widgetToFind.setExtraSelections(not_selections)
 
         self.closeSignal.emit()
+        self.close()
 
     def getLineEdit(self):
         return self.__lineEdit

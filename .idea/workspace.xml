@@ -5,7 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3deb5e5c-cfe4-4826-8592-9e5af723d95d" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/pyqt_find_text_widget/findTextWidget.py" beforeDir="false" afterPath="$PROJECT_DIR$/pyqt_find_text_widget/findTextWidget.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -101,7 +101,21 @@
       <option name="project" value="LOCAL" />
       <updated>1639804751281</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Add close button (Hide as default)">
+      <created>1639805101564</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1639805101564</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Correct method that make close button visible">
+      <created>1639805287347</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1639805287347</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -114,6 +128,8 @@
     <MESSAGE value="Make it work properly when nothing in the QLineEdit" />
     <MESSAGE value="Make it available to set background, foreground format of finding word on its own (not by changing QTextEdit style)" />
     <MESSAGE value="Fix typo" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fix typo" />
+    <MESSAGE value="Add close button (Hide as default)" />
+    <MESSAGE value="Correct method that make close button visible" />
+    <option name="LAST_COMMIT_MESSAGE" value="Correct method that make close button visible" />
   </component>
 </project>

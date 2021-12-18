@@ -46,15 +46,20 @@ class FindTextWidget(QWidget):
         self.__regexBtn = QPushButton()
         self.__regexBtn.setCheckable(True)
 
-        btns = [self.__prevBtn, self.__nextBtn, self.__caseBtn, self.__regexBtn]
+        self.__closeBtn = QPushButton()
+        self.__closeBtn.setVisible(False)
+        self.__closeBtn.clicked.connect(self.__close)
+
+        btns = [self.__prevBtn, self.__nextBtn, self.__caseBtn, self.__regexBtn, self.__closeBtn]
 
         PyQtResourceHelper.setStyleSheet(btns, ['style/button.css']*len(btns))
-        PyQtResourceHelper.setIcon(btns, ['ico/prev.png', 'ico/next.png', 'ico/case.png', 'ico/regex.png'])
+        PyQtResourceHelper.setIcon(btns, ['ico/prev.png', 'ico/next.png', 'ico/case.png', 'ico/regex.png', 'ico/close.png'])
 
         self.__prevBtn.setToolTip('Previous Occurrence')
         self.__nextBtn.setToolTip('Next Occurrence')
         self.__caseBtn.setToolTip('Match Case')
         self.__regexBtn.setToolTip('Regex')
+        self.__closeBtn.setToolTip('Close')
 
         lay = QHBoxLayout()
         lay.addWidget(self.__lineEdit)
@@ -63,6 +68,7 @@ class FindTextWidget(QWidget):
         lay.addWidget(self.__nextBtn)
         lay.addWidget(self.__caseBtn)
         lay.addWidget(self.__regexBtn)
+        lay.addWidget(self.__closeBtn)
         lay.setContentsMargins(0, 0, 0, 0)
 
         mainWidget = QWidget()
@@ -171,6 +177,9 @@ class FindTextWidget(QWidget):
             self.__lineEdit.setText(text)
 
         return super().showEvent(e)
+
+    def setCloseBtn(self, f: bool):
+        self.__closeBtn.setEnabled(f)
 
     def __close(self):
         not_selections = []

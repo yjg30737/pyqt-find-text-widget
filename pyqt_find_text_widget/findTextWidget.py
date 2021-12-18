@@ -31,6 +31,7 @@ class FindTextWidget(QWidget):
         self.__cnt_lbl = QLabel(self.__cnt_text.format(0))
 
         self.__prevBtn = QPushButton()
+
         self.__nextBtn = QPushButton()
         self.__nextBtn.setShortcut('Enter')
 
@@ -49,6 +50,7 @@ class FindTextWidget(QWidget):
         self.__closeBtn = QPushButton()
         self.__closeBtn.setVisible(False)
         self.__closeBtn.clicked.connect(self.__close)
+        self.__closeBtn.setShortcut('Escape')
 
         btns = [self.__prevBtn, self.__nextBtn, self.__caseBtn, self.__regexBtn, self.__closeBtn]
 

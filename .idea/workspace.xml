@@ -6,6 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="3deb5e5c-cfe4-4826-8592-9e5af723d95d" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pyqt_find_text_widget/findTextWidget.py" beforeDir="false" afterPath="$PROJECT_DIR$/pyqt_find_text_widget/findTextWidget.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -115,7 +116,14 @@
       <option name="project" value="LOCAL" />
       <updated>1639805287347</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Add close feature as well as closeSignal">
+      <created>1639805777447</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1639805777447</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -130,6 +138,7 @@
     <MESSAGE value="Fix typo" />
     <MESSAGE value="Add close button (Hide as default)" />
     <MESSAGE value="Correct method that make close button visible" />
-    <option name="LAST_COMMIT_MESSAGE" value="Correct method that make close button visible" />
+    <MESSAGE value="Add close feature as well as closeSignal" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add close feature as well as closeSignal" />
   </component>
 </project>

@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3deb5e5c-cfe4-4826-8592-9e5af723d95d" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="3deb5e5c-cfe4-4826-8592-9e5af723d95d" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -73,7 +71,21 @@
       <option name="project" value="LOCAL" />
       <updated>1639794621415</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="btn_toggled -&gt; __btnToggled">
+      <created>1639803806025</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1639803806025</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Make it work properly when nothing in the QLineEdit">
+      <created>1639804310780</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1639804310780</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -82,6 +94,8 @@
     <MESSAGE value="Use pyqt-resource-helper module" />
     <MESSAGE value="Fix typo (helpee-&gt;helper)" />
     <MESSAGE value="Fix IndexError" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fix IndexError" />
+    <MESSAGE value="btn_toggled -&gt; __btnToggled" />
+    <MESSAGE value="Make it work properly when nothing in the QLineEdit" />
+    <option name="LAST_COMMIT_MESSAGE" value="Make it work properly when nothing in the QLineEdit" />
   </component>
 </project>

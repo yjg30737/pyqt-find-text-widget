@@ -18,8 +18,6 @@ class FindTextWidget(QWidget):
         super().__init__()
         self.__widgetToFind = widget
 
-        self.__widgetToFind.setStyleSheet('QTextEdit { selection-background-color: lightblue; selection-color: red; }')
-
         self.__selectionsInit()
         self.__initUi()
 
@@ -101,7 +99,8 @@ class FindTextWidget(QWidget):
         self.__selectionsInit()
         doc = self.__widgetToFind.document()
         fmt = QTextCharFormat()
-        fmt.setForeground(Qt.red)
+        fmt.setForeground(Qt.green)
+        fmt.setBackground(Qt.darkYellow)
         cur = QTextCursor()
         while True:
             if flags:

@@ -79,14 +79,11 @@ class FindTextWidget(QWidget):
 
     def __textChanged(self, text, flags=None):
         f1 = text.strip() != ''
-        if f1:
-            if self.__caseBtn.isChecked():
-                flags = QTextDocument.FindCaseSensitively
-            self.__findInit(text, flags)
-            f2 = len(self.__selections) > 0
-            self.btnToggled(f1 and f2)
-        else:
-            self.__cnt_lbl.setText(self.__cnt_text.format(0))
+        if self.__caseBtn.isChecked():
+            flags = QTextDocument.FindCaseSensitively
+        self.__findInit(text, flags)
+        f2 = len(self.__selections) > 0
+        self.__btnToggled(f1 and f2)
 
     def __setCount(self):
         word_cnt = len(self.__selections)

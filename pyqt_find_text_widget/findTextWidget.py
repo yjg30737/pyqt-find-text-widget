@@ -49,7 +49,7 @@ class FindTextWidget(QWidget):
 
         self.__closeBtn = QPushButton()
         self.__closeBtn.setVisible(False)
-        self.__closeBtn.clicked.connect(self.__close)
+        self.__closeBtn.clicked.connect(self.close)
         self.__closeBtn.setShortcut('Escape')
 
         btns = [self.__prevBtn, self.__nextBtn, self.__caseBtn, self.__regexBtn, self.__closeBtn]

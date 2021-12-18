@@ -37,7 +37,7 @@ class FindTextWidget(QWidget):
         self.__prevBtn.clicked.connect(self.prev)
         self.__nextBtn.clicked.connect(self.next)
 
-        self.btnToggled(False)
+        self.__btnToggled(False)
 
         self.__caseBtn = QPushButton()
         self.__caseBtn.setCheckable(True)

@@ -85,7 +85,14 @@
       <option name="project" value="LOCAL" />
       <updated>1639804310780</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Make it available to set background, foreground format of finding word on its own (not by changing QTextEdit style)">
+      <created>1639804634909</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1639804634909</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -96,6 +103,7 @@
     <MESSAGE value="Fix IndexError" />
     <MESSAGE value="btn_toggled -&gt; __btnToggled" />
     <MESSAGE value="Make it work properly when nothing in the QLineEdit" />
-    <option name="LAST_COMMIT_MESSAGE" value="Make it work properly when nothing in the QLineEdit" />
+    <MESSAGE value="Make it available to set background, foreground format of finding word on its own (not by changing QTextEdit style)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Make it available to set background, foreground format of finding word on its own (not by changing QTextEdit style)" />
   </component>
 </project>

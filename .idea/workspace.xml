@@ -57,13 +57,21 @@
       <option name="project" value="LOCAL" />
       <updated>1639793939387</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Fix typo (helpee-&gt;helper)">
+      <created>1639794233101</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1639794233101</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Reload .idea, Rename method as camelcase" />
     <MESSAGE value="Add setText(text: str) method" />
     <MESSAGE value="Use pyqt-resource-helper module" />
-    <option name="LAST_COMMIT_MESSAGE" value="Use pyqt-resource-helper module" />
+    <MESSAGE value="Fix typo (helpee-&gt;helper)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix typo (helpee-&gt;helper)" />
   </component>
 </project>

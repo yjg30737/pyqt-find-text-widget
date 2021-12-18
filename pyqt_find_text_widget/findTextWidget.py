@@ -50,7 +50,7 @@ class FindTextWidget(QWidget):
 
         btns = [self.__prevBtn, self.__nextBtn, self.__caseBtn, self.__regexBtn]
 
-        PyQtResourceHelper.setStyleSheet(btns, ['style/button.css'])
+        PyQtResourceHelper.setStyleSheet(btns, ['style/button.css']*len(btns))
         PyQtResourceHelper.setIcon(btns, ['ico/prev.png', 'ico/next.png', 'ico/case.png', 'ico/regex.png'])
 
         self.__prevBtn.setToolTip('Previous Occurrence')

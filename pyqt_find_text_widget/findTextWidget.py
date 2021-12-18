@@ -179,7 +179,7 @@ class FindTextWidget(QWidget):
         return super().showEvent(e)
 
     def setCloseBtn(self, f: bool):
-        self.__closeBtn.setEnabled(f)
+        self.__closeBtn.setVisible(f)
 
     def __close(self):
         not_selections = []

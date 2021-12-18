@@ -183,7 +183,8 @@ class FindTextWidget(QWidget):
     def setCloseBtn(self, f: bool):
         self.__closeBtn.setVisible(f)
 
-    def __close(self):
+    def close(self):
+        super().close()
         not_selections = []
         fmt = QTextCharFormat()
         fmt.setForeground(self.__widgetToFind.textColor())
@@ -196,7 +197,6 @@ class FindTextWidget(QWidget):
         self.__widgetToFind.setExtraSelections(not_selections)
 
         self.closeSignal.emit()
-        self.close()
 
     def getLineEdit(self):
         return self.__lineEdit

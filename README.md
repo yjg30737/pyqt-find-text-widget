@@ -12,8 +12,10 @@ pip install git+https://github.com/yjg30737/pyqt-find-text-widget.git --upgrade
 ## Feature
 * Previous, Next occurence
 * Match case
-* Regex
 * Providing prev, next, close signals
+* Enable to set close button with ```setCloseBtn(f: bool)```
+
+I'm still working with regex feature.
 
 ## Signal
 * prevClicked
@@ -34,6 +36,8 @@ class MainWindow(QMainWindow):
 
     def __initUi(self):
         self.__te = QTextEdit()
+        self.__te.setStyleSheet('QTextEdit { selection-background-color: lightblue; }') # I wrote this code because color of default selection doesn't stand out in the white textedit screen.
+
         self.__w = FindTextWidget(self.__te)
 
         lay = QGridLayout()
@@ -54,6 +58,10 @@ if __name__ == "__main__":
     mainWindow.show()
     sys.exit(app.exec_())
 ```
-And i give you sweet result gif
+And i give you sweet result video.
 
-![example](example/example.gif)
+
+https://user-images.githubusercontent.com/55078043/146631688-329eade1-ba51-4e25-a6cd-8cfe8efe2eda.mp4
+
+
+

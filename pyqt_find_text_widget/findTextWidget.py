@@ -39,7 +39,7 @@ class FindTextWidget(QWidget):
         self.__prevBtn.clicked.connect(self.prev)
         self.__nextBtn.clicked.connect(self.next)
 
-        self.btn_toggled(False)
+        self.btnToggled(False)
 
         self.__caseBtn = QPushButton()
         self.__caseBtn.setCheckable(True)
@@ -84,7 +84,7 @@ class FindTextWidget(QWidget):
                 flags = QTextDocument.FindCaseSensitively
             self.__findInit(text, flags)
             f2 = len(self.__selections) > 0
-            self.btn_toggled(f1 and f2)
+            self.btnToggled(f1 and f2)
         else:
             self.__cnt_lbl.setText(self.__cnt_text.format(0))
 
@@ -92,7 +92,7 @@ class FindTextWidget(QWidget):
         word_cnt = len(self.__selections)
         self.__cnt_lbl.setText(self.__cnt_text.format(word_cnt))
 
-    def btn_toggled(self, f):
+    def __btnToggled(self, f):
         self.__prevBtn.setEnabled(f)
         self.__nextBtn.setEnabled(f)
 

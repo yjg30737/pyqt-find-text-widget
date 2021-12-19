@@ -22,11 +22,11 @@ class FindTextWidget(QWidget):
         self.__initUi()
 
     def __initUi(self):
-        self.__lineEdit = QLineEdit()
-        self.__lineEdit.setStyleSheet('QLineEdit { border: none; }')
-        self.__lineEdit.textChanged.connect(self.__textChanged)
-        self.__lineEdit.returnPressed.connect(self.next)
-        self.setFocusProxy(self.__lineEdit)
+        self.__findTextLineEdit = QLineEdit()
+        self.__findTextLineEdit.setStyleSheet('QLineEdit { border: none; }')
+        self.__findTextLineEdit.textChanged.connect(self.__textChanged)
+        self.__findTextLineEdit.returnPressed.connect(self.next)
+        self.setFocusProxy(self.__findTextLineEdit)
 
         self.__cnt_text = '{0} results'
         self.__cnt_lbl = QLabel(self.__cnt_text.format(0))
@@ -65,7 +65,7 @@ class FindTextWidget(QWidget):
         self.__closeBtn.setToolTip('Close')
 
         lay = QHBoxLayout()
-        lay.addWidget(self.__lineEdit)
+        lay.addWidget(self.__findTextLineEdit)
         lay.addWidget(self.__cnt_lbl)
         lay.addWidget(self.__prevBtn)
         lay.addWidget(self.__nextBtn)
@@ -85,7 +85,7 @@ class FindTextWidget(QWidget):
         self.setLayout(lay)
 
     def widgetTextChanged(self):
-        self.__textChanged(self.__lineEdit.text(), flags=None, widgetTextChanged=True)
+        self.__textChanged(self.__findTextLineEdit.text(), flags=None, widgetTextChanged=True)
 
     def __textChanged(self, text, flags=None, widgetTextChanged=False):
         f1 = text.strip() != ''
@@ -138,7 +138,7 @@ class FindTextWidget(QWidget):
         else:
             self.__selections_idx -= 1
 
-            text = self.__lineEdit.text()
+            text = self.__findTextLineEdit.text()
             cur = self.__selections[self.__selections_idx].cursor
             start = cur.selectionStart()
             end = cur.selectionEnd()
@@ -156,7 +156,7 @@ class FindTextWidget(QWidget):
                 QMessageBox.information(self, 'Notice', 'End of file.')
             else:
                 self.__selections_idx += 1
-                text = self.__lineEdit.text()
+                text = self.__findTextLineEdit.text()
                 cur = self.__selections[self.__selections_idx].cursor
                 start = cur.selectionStart()
                 end = cur.selectionEnd()
@@ -169,7 +169,7 @@ class FindTextWidget(QWidget):
                 self.nextClicked.emit(text)
 
     def __caseToggled(self, f):
-        text = self.__lineEdit.text()
+        text = self.__findTextLineEdit.text()
         if f:
             flags = QTextDocument.FindCaseSensitively
             self.__textChanged(text, flags)
@@ -179,11 +179,11 @@ class FindTextWidget(QWidget):
     def showEvent(self, e):
         cur = self.__widgetToFind.textCursor()
         text = cur.selectedText()
-        prev_text = self.__lineEdit.text()
+        prev_text = self.__findTextLineEdit.text()
         if prev_text == text:
             self.__textChanged(text)
         else:
-            self.__lineEdit.setText(text)
+            self.__findTextLineEdit.setText(text)
 
         return super().showEvent(e)
 
@@ -206,7 +206,7 @@ class FindTextWidget(QWidget):
         self.closeSignal.emit()
 
     def getLineEdit(self):
-        return self.__lineEdit
+        return self.__findTextLineEdit
 
     def setLineEdit(self, text: str):
-        self.__lineEdit.setText(text)
+        self.__findTextLineEdit.setText(text)

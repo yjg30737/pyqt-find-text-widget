@@ -84,11 +84,14 @@ class FindTextWidget(QWidget):
 
         self.setLayout(lay)
 
-    def __textChanged(self, text, flags=None):
+    def widgetTextChanged(self):
+        self.__textChanged(self.__lineEdit.text(), flags=None, widgetTextChanged=True)
+
+    def __textChanged(self, text, flags=None, widgetTextChanged=False):
         f1 = text.strip() != ''
         if self.__caseBtn.isChecked():
             flags = QTextDocument.FindCaseSensitively
-        self.__findInit(text, flags)
+        self.__findInit(text, flags=flags, widgetTextChanged=widgetTextChanged)
         f2 = len(self.__selections) > 0
         self.__btnToggled(f1 and f2)
 
@@ -104,7 +107,7 @@ class FindTextWidget(QWidget):
         self.__selections = []
         self.__selections_idx = -1
 
-    def __findInit(self, text, flags=None):
+    def __findInit(self, text, flags=None, widgetTextChanged=False):
         self.__selectionsInit()
         doc = self.__widgetToFind.document()
         fmt = QTextCharFormat()
@@ -124,7 +127,10 @@ class FindTextWidget(QWidget):
             self.__selections.append(sel)
         self.__widgetToFind.setExtraSelections(self.__selections)
         self.__setCount()
-        self.next()
+        if widgetTextChanged:
+            pass
+        else:
+            self.next()
 
     def prev(self):
         if self.__selections_idx-1 < 0:

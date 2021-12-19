@@ -26,6 +26,7 @@ class FindTextWidget(QWidget):
         self.__lineEdit.setStyleSheet('QLineEdit { border: none; }')
         self.__lineEdit.textChanged.connect(self.__textChanged)
         self.__lineEdit.returnPressed.connect(self.next)
+        self.setFocusProxy(self.__lineEdit)
 
         self.__cnt_text = '{0} results'
         self.__cnt_lbl = QLabel(self.__cnt_text.format(0))

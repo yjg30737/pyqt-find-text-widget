@@ -129,7 +129,21 @@
       <option name="project" value="LOCAL" />
       <updated>1639807417938</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Make closing method as public">
+      <created>1639825170010</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1639825170010</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Fix typo">
+      <created>1639825222579</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1639825222579</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -141,11 +155,12 @@
     <MESSAGE value="btn_toggled -&gt; __btnToggled" />
     <MESSAGE value="Make it work properly when nothing in the QLineEdit" />
     <MESSAGE value="Make it available to set background, foreground format of finding word on its own (not by changing QTextEdit style)" />
-    <MESSAGE value="Fix typo" />
     <MESSAGE value="Add close button (Hide as default)" />
     <MESSAGE value="Correct method that make close button visible" />
     <MESSAGE value="Add close feature as well as closeSignal" />
     <MESSAGE value="Set shortcut(escape) of close button" />
-    <option name="LAST_COMMIT_MESSAGE" value="Set shortcut(escape) of close button" />
+    <MESSAGE value="Make closing method as public" />
+    <MESSAGE value="Fix typo" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix typo" />
   </component>
 </project>

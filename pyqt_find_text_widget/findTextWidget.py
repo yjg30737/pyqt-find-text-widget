@@ -120,6 +120,12 @@ class FindTextWidget(QWidget):
             else:
                 cur = doc.find(text, cur)
             if cur.isNull() or cur.atEnd():
+                if cur.atEnd():
+                    if cur.selectedText() == text:
+                        sel = QTextBrowser.ExtraSelection()
+                        sel.cursor = cur
+                        sel.format = fmt
+                        self.__selections.append(sel)
                 break
             sel = QTextBrowser.ExtraSelection()
             sel.cursor = cur

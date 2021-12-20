@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3deb5e5c-cfe4-4826-8592-9e5af723d95d" name="Changes" comment="" />
+    <list default="true" id="3deb5e5c-cfe4-4826-8592-9e5af723d95d" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pyqt_find_text_widget/findTextWidget.py" beforeDir="false" afterPath="$PROJECT_DIR$/pyqt_find_text_widget/findTextWidget.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -155,7 +158,14 @@
       <option name="project" value="LOCAL" />
       <updated>1639957924896</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="Modify variable's name (lineEdit -&gt; findTextLineEdit)">
+      <created>1639958157591</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1639958157591</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -175,6 +185,7 @@
     <MESSAGE value="Fix typo" />
     <MESSAGE value="Set focus to QLineEdit" />
     <MESSAGE value="Accept textChanged event of QTextEdit or QTextBrowser to update" />
-    <option name="LAST_COMMIT_MESSAGE" value="Accept textChanged event of QTextEdit or QTextBrowser to update" />
+    <MESSAGE value="Modify variable's name (lineEdit -&gt; findTextLineEdit)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Modify variable's name (lineEdit -&gt; findTextLineEdit)" />
   </component>
 </project>

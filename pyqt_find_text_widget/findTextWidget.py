@@ -108,6 +108,12 @@ class FindTextWidget(QWidget):
         self.__selections_idx = -1
 
     def __findInit(self, text, flags=None, widgetTextChanged=False):
+        def addSelection():
+            sel = QTextBrowser.ExtraSelection()
+            sel.cursor = cur
+            sel.format = fmt
+            self.__selections.append(sel)
+
         self.__selectionsInit()
         doc = self.__widgetToFind.document()
         fmt = QTextCharFormat()
@@ -122,15 +128,9 @@ class FindTextWidget(QWidget):
             if cur.isNull() or cur.atEnd():
                 if cur.atEnd():
                     if cur.selectedText() == text:
-                        sel = QTextBrowser.ExtraSelection()
-                        sel.cursor = cur
-                        sel.format = fmt
-                        self.__selections.append(sel)
+                        addSelection()
                 break
-            sel = QTextBrowser.ExtraSelection()
-            sel.cursor = cur
-            sel.format = fmt
-            self.__selections.append(sel)
+            addSelection()
         self.__widgetToFind.setExtraSelections(self.__selections)
         self.__setCount()
         if widgetTextChanged:

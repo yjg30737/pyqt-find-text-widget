@@ -1,9 +1,7 @@
-import os
-
 from PyQt5.QtCore import Qt, pyqtSignal
 from PyQt5.QtGui import QTextCursor, QTextCharFormat, QTextDocument, QIcon
 from PyQt5.QtWidgets import QWidget, QPushButton, QTextBrowser, QLabel, \
-    QHBoxLayout, QGridLayout, QLineEdit, QMessageBox
+    QHBoxLayout, QGridLayout, QLineEdit, QMessageBox, QApplication, QTextEdit
 
 from pyqt_resource_helper.pyqtResourceHelper import PyQtResourceHelper
 
@@ -45,6 +43,10 @@ class FindTextWidget(QWidget):
         self.__caseBtn.setCheckable(True)
         self.__caseBtn.toggled.connect(self.__caseToggled)
 
+        self.__wordBtn = QPushButton()
+        self.__wordBtn.setCheckable(True)
+        self.__wordBtn.toggled.connect(self.__wordToggled)
+
         self.__regexBtn = QPushButton()
         self.__regexBtn.setCheckable(True)
 
@@ -53,14 +55,16 @@ class FindTextWidget(QWidget):
         self.__closeBtn.clicked.connect(self.close)
         self.__closeBtn.setShortcut('Escape')
 
-        btns = [self.__prevBtn, self.__nextBtn, self.__caseBtn, self.__regexBtn, self.__closeBtn]
+        btns = [self.__prevBtn, self.__nextBtn, self.__caseBtn, self.__wordBtn, self.__regexBtn, self.__closeBtn]
 
         PyQtResourceHelper.setStyleSheet(btns, ['style/button.css']*len(btns))
-        PyQtResourceHelper.setIcon(btns, ['ico/prev.png', 'ico/next.png', 'ico/case.png', 'ico/regex.png', 'ico/close.png'])
+        PyQtResourceHelper.setIcon(btns, ['ico/prev.png', 'ico/next.png', 'ico/case.png',
+                                          'ico/word.png', 'ico/regex.png', 'ico/close.png'])
 
         self.__prevBtn.setToolTip('Previous Occurrence')
         self.__nextBtn.setToolTip('Next Occurrence')
         self.__caseBtn.setToolTip('Match Case')
+        self.__wordBtn.setToolTip('Match Word')
         self.__regexBtn.setToolTip('Regex')
         self.__closeBtn.setToolTip('Close')
 
@@ -70,6 +74,7 @@ class FindTextWidget(QWidget):
         lay.addWidget(self.__prevBtn)
         lay.addWidget(self.__nextBtn)
         lay.addWidget(self.__caseBtn)
+        lay.addWidget(self.__wordBtn)
         lay.addWidget(self.__regexBtn)
         lay.addWidget(self.__closeBtn)
         lay.setContentsMargins(0, 0, 0, 0)
@@ -85,12 +90,19 @@ class FindTextWidget(QWidget):
         self.setLayout(lay)
 
     def widgetTextChanged(self):
-        self.__textChanged(self.__findTextLineEdit.text(), flags=None, widgetTextChanged=True)
+        self.__textChanged(self.__findTextLineEdit.text(), widgetTextChanged=True)
 
-    def __textChanged(self, text, flags=None, widgetTextChanged=False):
+    def __textChanged(self, text, widgetTextChanged=False):
         f1 = text.strip() != ''
+        flags = 0
         if self.__caseBtn.isChecked():
-            flags = QTextDocument.FindCaseSensitively
+            flags = flags | QTextDocument.FindCaseSensitively
+        else:
+            flags = flags & ~QTextDocument.FindCaseSensitively
+        if self.__wordBtn.isChecked():
+            flags = flags | QTextDocument.FindWholeWords
+        else:
+            flags = flags & ~QTextDocument.FindWholeWords
         self.__findInit(text, flags=flags, widgetTextChanged=widgetTextChanged)
         f2 = len(self.__selections) > 0
         self.__btnToggled(f1 and f2)
@@ -107,7 +119,7 @@ class FindTextWidget(QWidget):
         self.__selections = []
         self.__selections_idx = -1
 
-    def __findInit(self, text, flags=None, widgetTextChanged=False):
+    def __findInit(self, text, flags=0, widgetTextChanged=False):
         def addSelection():
             sel = QTextBrowser.ExtraSelection()
             sel.cursor = cur
@@ -176,11 +188,11 @@ class FindTextWidget(QWidget):
 
     def __caseToggled(self, f):
         text = self.__findTextLineEdit.text()
-        if f:
-            flags = QTextDocument.FindCaseSensitively
-            self.__textChanged(text, flags)
-        else:
-            self.__textChanged(text)
+        self.__textChanged(text)
+
+    def __wordToggled(self, f):
+        text = self.__findTextLineEdit.text()
+        self.__textChanged(text)
 
     def showEvent(self, e):
         cur = self.__widgetToFind.textCursor()
@@ -216,3 +228,4 @@ class FindTextWidget(QWidget):
 
     def setLineEdit(self, text: str):
         self.__findTextLineEdit.setText(text)
+

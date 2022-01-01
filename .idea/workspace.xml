@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3deb5e5c-cfe4-4826-8592-9e5af723d95d" name="Changes" comment="Add feature (Find one which whole word matched), Update version (0.0.1 -&gt; 0.1.0)" />
+    <list default="true" id="3deb5e5c-cfe4-4826-8592-9e5af723d95d" name="Changes" comment="Add mistakenly omitted icon file(word.png) in setup.py, Update version (0.1.0 -&gt; 0.1.1)">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -243,7 +245,14 @@
       <option name="project" value="LOCAL" />
       <updated>1641014032585</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="Add mistakenly omitted icon file(word.png) in setup.py, Update version (0.1.0 -&gt; 0.1.1)">
+      <created>1641014300766</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1641014300766</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -268,6 +277,7 @@
     <MESSAGE value="Fix the problem that last letter does not include" />
     <MESSAGE value="Refactoring" />
     <MESSAGE value="Add feature (Find one which whole word matched), Update version (0.0.1 -&gt; 0.1.0)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add feature (Find one which whole word matched), Update version (0.0.1 -&gt; 0.1.0)" />
+    <MESSAGE value="Add mistakenly omitted icon file(word.png) in setup.py, Update version (0.1.0 -&gt; 0.1.1)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add mistakenly omitted icon file(word.png) in setup.py, Update version (0.1.0 -&gt; 0.1.1)" />
   </component>
 </project>

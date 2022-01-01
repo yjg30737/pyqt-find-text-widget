@@ -12,6 +12,7 @@ pip install git+https://github.com/yjg30737/pyqt-find-text-widget.git --upgrade
 ## Feature
 * Previous, Next occurence
 * Match case
+* Makes find match only complete words
 * Providing prev, next, close signals
 * Enable to set close button with ```setCloseBtn(f: bool)```
 

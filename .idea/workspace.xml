@@ -4,12 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3deb5e5c-cfe4-4826-8592-9e5af723d95d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/pyqt_find_text_widget/ico/word.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pyqt_find_text_widget/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pyqt_find_text_widget/findTextWidget.py" beforeDir="false" afterPath="$PROJECT_DIR$/pyqt_find_text_widget/findTextWidget.py" afterDir="false" />
-    </list>
+    <list default="true" id="3deb5e5c-cfe4-4826-8592-9e5af723d95d" name="Changes" comment="Add feature (Find one which whole word matched), Update version (0.0.1 -&gt; 0.1.0)" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -241,7 +236,14 @@
       <option name="project" value="LOCAL" />
       <updated>1639972340704</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="Add feature (Find one which whole word matched), Update version (0.0.1 -&gt; 0.1.0)">
+      <created>1641014032584</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1641014032585</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -265,6 +267,7 @@
     <MESSAGE value="Modify variable's name (lineEdit -&gt; findTextLineEdit)" />
     <MESSAGE value="Fix the problem that last letter does not include" />
     <MESSAGE value="Refactoring" />
-    <option name="LAST_COMMIT_MESSAGE" value="Refactoring" />
+    <MESSAGE value="Add feature (Find one which whole word matched), Update version (0.0.1 -&gt; 0.1.0)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add feature (Find one which whole word matched), Update version (0.0.1 -&gt; 0.1.0)" />
   </component>
 </project>

@@ -6,7 +6,7 @@ PyQt5 >= 5.8
 
 ## Setup
 ```
-pip install git+https://github.com/yjg30737/pyqt-find-text-widget.git --upgrade
+pip3 install git+https://github.com/yjg30737/pyqt-find-text-widget.git --upgrade
 ```
 
 ## Feature

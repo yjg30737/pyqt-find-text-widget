@@ -61,8 +61,11 @@ if __name__ == "__main__":
 ```
 And i give you sweet result video.
 
-
 https://user-images.githubusercontent.com/55078043/146631688-329eade1-ba51-4e25-a6cd-8cfe8efe2eda.mp4
+
+Match case & complete word only example
+
+https://user-images.githubusercontent.com/55078043/147844473-76474b51-2b2d-4680-82e4-8a67ab263db3.mp4
 
 
 

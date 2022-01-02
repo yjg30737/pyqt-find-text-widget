@@ -26,8 +26,9 @@ class FindTextWidget(QWidget):
         self.__findTextLineEdit.returnPressed.connect(self.next)
         self.setFocusProxy(self.__findTextLineEdit)
 
-        self.__cnt_text = '{0} results'
-        self.__cnt_lbl = QLabel(self.__cnt_text.format(0))
+        self.__cnt_init_text = '{0} results'
+        self.__cnt_cur_idx_text = '{0}/{1}'
+        self.__cnt_lbl = QLabel(self.__cnt_init_text.format(0))
 
         self.__prevBtn = QPushButton()
 
@@ -109,7 +110,7 @@ class FindTextWidget(QWidget):
 
     def __setCount(self):
         word_cnt = len(self.__selections)
-        self.__cnt_lbl.setText(self.__cnt_text.format(word_cnt))
+        self.__cnt_lbl.setText(self.__cnt_init_text.format(word_cnt))
 
     def __btnToggled(self, f):
         self.__prevBtn.setEnabled(f)
@@ -164,7 +165,8 @@ class FindTextWidget(QWidget):
                 else:
                     self.__selections_idx = pos_lst.index(closest_value)
                 text = self.__findTextLineEdit.text()
-                self.__setCursorTo(text)
+                self.__setCursor()
+                self.__cnt_lbl.setText(self.__cnt_cur_idx_text.format(self.__selections_idx+1, len(self.__selections)))
                 self.prevClicked.emit(text)
             else:
                 pass
@@ -185,15 +187,16 @@ class FindTextWidget(QWidget):
                         self.__selections_idx = len(self.__selections)-len(pos_lst) + pos_lst.index(closest_value)
 
                     text = self.__findTextLineEdit.text()
-                    self.__setCursorTo(text)
+                    self.__setCursor()
+                    self.__cnt_lbl.setText(self.__cnt_cur_idx_text.format(self.__selections_idx+1, len(self.__selections)))
                     self.nextClicked.emit(text)
                 else:
                     text = self.__findTextLineEdit.text()
                     self.__selections_idx += 1
-                    self.__setCursorTo(text)
+                    self.__setCursor()
                     self.nextClicked.emit(text)
 
-    def __setCursorTo(self, text):
+    def __setCursor(self):
         cur = self.__selections[self.__selections_idx].cursor
         start = cur.selectionStart()
         end = cur.selectionEnd()

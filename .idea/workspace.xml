@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3deb5e5c-cfe4-4826-8592-9e5af723d95d" name="Changes" comment="Add feature (move cursor to prev/next occurrence based on current cursor position)">
+    <list default="true" id="3deb5e5c-cfe4-4826-8592-9e5af723d95d" name="Changes" comment="Add feature (Show current index of selections like 2/5 (second out of five)), Update version (0.2.1 -&gt; 0.3.1)">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pyqt_find_text_widget/findTextWidget.py" beforeDir="false" afterPath="$PROJECT_DIR$/pyqt_find_text_widget/findTextWidget.py" afterDir="false" />
     </list>
@@ -261,7 +261,14 @@
       <option name="project" value="LOCAL" />
       <updated>1641031727155</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="Add feature (Show current index of selections like 2/5 (second out of five)), Update version (0.2.1 -&gt; 0.3.1)">
+      <created>1641087017051</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1641087017051</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -288,6 +295,7 @@
     <MESSAGE value="Add feature (Find one which whole word matched), Update version (0.0.1 -&gt; 0.1.0)" />
     <MESSAGE value="Add mistakenly omitted icon file(word.png) in setup.py, Update version (0.1.0 -&gt; 0.1.1)" />
     <MESSAGE value="Add feature (move cursor to prev/next occurrence based on current cursor position)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add feature (move cursor to prev/next occurrence based on current cursor position)" />
+    <MESSAGE value="Add feature (Show current index of selections like 2/5 (second out of five)), Update version (0.2.1 -&gt; 0.3.1)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add feature (Show current index of selections like 2/5 (second out of five)), Update version (0.2.1 -&gt; 0.3.1)" />
   </component>
 </project>

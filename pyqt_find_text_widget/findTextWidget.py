@@ -152,19 +152,35 @@ class FindTextWidget(QWidget):
             self.next()
 
     def prev(self):
-        if self.__selections_idx-1 < 0:
-            QMessageBox.information(self, 'Notice', 'Start of file.')
-        else:
-            cur_pos = self.__widgetToFind.textCursor().position()
+        cur_pos = self.__widgetToFind.textCursor().position()
+        text = self.__findTextLineEdit.text()
+
+        def getPosList():
             pos_lst = [selection.cursor.position() for selection in self.__selections]
             pos_lst = [c for c in pos_lst if c < cur_pos]
+            return pos_lst
+
+        if self.__selections_idx-1 < 0:
+            if cur_pos > self.__selections[0].cursor.position():
+                pos_lst = getPosList()
+                if len(pos_lst) > 0:
+                    closest_value = max(pos_lst)
+                    self.__selections_idx = pos_lst.index(closest_value)
+                    self.__setCursor()
+                    self.__cnt_lbl.setText(self.__cnt_cur_idx_text.format(self.__selections_idx+1, len(self.__selections)))
+                    self.prevClicked.emit(text)
+                else:
+                    pass
+            else:
+                QMessageBox.information(self, 'Notice', 'Start of file.')
+        else:
+            pos_lst = getPosList()
             if len(pos_lst) > 0:
                 closest_value = max(pos_lst)
                 if cur_pos in pos_lst:
                     self.__selections_idx -= 1
                 else:
                     self.__selections_idx = pos_lst.index(closest_value)
-                text = self.__findTextLineEdit.text()
                 self.__setCursor()
                 self.__cnt_lbl.setText(self.__cnt_cur_idx_text.format(self.__selections_idx+1, len(self.__selections)))
                 self.prevClicked.emit(text)
@@ -172,26 +188,42 @@ class FindTextWidget(QWidget):
                 pass
 
     def next(self):
+        cur_pos = self.__widgetToFind.textCursor().position()
+        text = self.__findTextLineEdit.text()
+
+        def getPosList():
+            pos_lst = [selection.cursor.position() for selection in self.__selections]
+            pos_lst = [c for c in pos_lst if c > cur_pos]
+            return pos_lst
+
         if len(self.__selections) > 0:
             if self.__selections_idx+1 >= len(self.__selections):
-                QMessageBox.information(self, 'Notice', 'End of file.')
+                if cur_pos < self.__selections[-1].cursor.position():
+                    pos_lst = getPosList()
+                    if len(pos_lst) > 0:
+                        closest_value = min(pos_lst)
+                        self.__selections_idx = len(self.__selections)-len(pos_lst) + pos_lst.index(closest_value)
+
+                        self.__setCursor()
+                        self.__cnt_lbl.setText(
+                            self.__cnt_cur_idx_text.format(self.__selections_idx + 1, len(self.__selections)))
+                        self.nextClicked.emit(text)
+                    else:
+                        pass
+                else:
+                    QMessageBox.information(self, 'Notice', 'End of file.')
             else:
-                cur_pos = self.__widgetToFind.textCursor().position()
-                pos_lst = [selection.cursor.position() for selection in self.__selections]
-                pos_lst = [c for c in pos_lst if c > cur_pos]
+                pos_lst = getPosList()
                 if len(pos_lst) > 0:
                     closest_value = min(pos_lst)
                     if cur_pos in pos_lst:
                         self.__selections_idx += 1
                     else:
                         self.__selections_idx = len(self.__selections)-len(pos_lst) + pos_lst.index(closest_value)
-
-                    text = self.__findTextLineEdit.text()
                     self.__setCursor()
                     self.__cnt_lbl.setText(self.__cnt_cur_idx_text.format(self.__selections_idx+1, len(self.__selections)))
                     self.nextClicked.emit(text)
                 else:
-                    text = self.__findTextLineEdit.text()
                     self.__selections_idx += 1
                     self.__setCursor()
                     self.nextClicked.emit(text)

@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3deb5e5c-cfe4-4826-8592-9e5af723d95d" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/pyqt_find_text_widget/findTextWidget.py" beforeDir="false" afterPath="$PROJECT_DIR$/pyqt_find_text_widget/findTextWidget.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/setup.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup.py" afterDir="false" />
+    <list default="true" id="3deb5e5c-cfe4-4826-8592-9e5af723d95d" name="Changes" comment="Update description">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pyqt_find_text_widget/ico/word.svg" beforeDir="false" afterPath="$PROJECT_DIR$/pyqt_find_text_widget/ico/word.svg" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -289,16 +288,46 @@
       <option name="project" value="LOCAL" />
       <updated>1647766725121</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="Replace pyqt-resource-helper with pyqt-svg-icon-pushbutton">
+      <created>1647766795442</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1647766795442</updated>
+    </task>
+    <task id="LOCAL-00028" summary="Remove unused modules">
+      <created>1647766808635</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1647766808635</updated>
+    </task>
+    <task id="LOCAL-00029" summary="Remove style file which is not necessary anymore">
+      <created>1647766839150</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1647766839150</updated>
+    </task>
+    <task id="LOCAL-00030" summary="Replace QPushButton with SvgIconPushButton">
+      <created>1647766993921</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1647766993921</updated>
+    </task>
+    <task id="LOCAL-00031" summary="Update description">
+      <created>1647767071304</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1647767071304</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Reload .idea, Rename method as camelcase" />
-    <MESSAGE value="Add setText(text: str) method" />
-    <MESSAGE value="Use pyqt-resource-helper module" />
-    <MESSAGE value="Fix typo (helpee-&gt;helper)" />
-    <MESSAGE value="Fix IndexError" />
     <MESSAGE value="btn_toggled -&gt; __btnToggled" />
     <MESSAGE value="Make it work properly when nothing in the QLineEdit" />
     <MESSAGE value="Make it available to set background, foreground format of finding word on its own (not by changing QTextEdit style)" />
@@ -319,6 +348,11 @@
     <MESSAGE value="Add feature (Show current index of selections like 2/5 (second out of five)), Update version (0.2.1 -&gt; 0.3.1)" />
     <MESSAGE value="Bug fix related to first, last index, refactoring, update version (0.3.1 -&gt; 0.3.2)" />
     <MESSAGE value="Replace png with svg" />
-    <option name="LAST_COMMIT_MESSAGE" value="Replace png with svg" />
+    <MESSAGE value="Replace pyqt-resource-helper with pyqt-svg-icon-pushbutton" />
+    <MESSAGE value="Remove unused modules" />
+    <MESSAGE value="Remove style file which is not necessary anymore" />
+    <MESSAGE value="Replace QPushButton with SvgIconPushButton" />
+    <MESSAGE value="Update description" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update description" />
   </component>
 </project>

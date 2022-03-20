@@ -1,5 +1,5 @@
 # pyqt-find-text-widget
-PyQt5 find text widget
+PyQt widget which is able to find text in QTextEdit/QTextBrowser
 
 ## Requirements
 PyQt5 >= 5.8
@@ -9,8 +9,11 @@ PyQt5 >= 5.8
 pip3 install git+https://github.com/yjg30737/pyqt-find-text-widget.git --upgrade
 ```
 
+## Included Packages
+* <a href="https://github.com/yjg30737/pyqt-svg-icon-pushbutton.git">pyqt-svg-icon-pushbutton</a>
+
 ## Feature
-* Previous, Next occurence
+* Find previous, next occurence based on text cursor's position
 * Match case
 * Makes find match only complete words
 * Providing prev, next, close signals

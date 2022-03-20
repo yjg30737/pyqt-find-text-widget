@@ -1,7 +1,7 @@
 from PyQt5.QtCore import Qt, pyqtSignal
-from PyQt5.QtGui import QTextCursor, QTextCharFormat, QTextDocument, QIcon
+from PyQt5.QtGui import QTextCursor, QTextCharFormat, QTextDocument
 from PyQt5.QtWidgets import QWidget, QPushButton, QTextBrowser, QLabel, \
-    QHBoxLayout, QGridLayout, QLineEdit, QMessageBox, QApplication, QTextEdit
+    QHBoxLayout, QGridLayout, QLineEdit, QMessageBox
 
 from pyqt_svg_icon_pushbutton.svgIconPushButton import SvgIconPushButton
 

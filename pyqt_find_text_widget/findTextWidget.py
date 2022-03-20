@@ -3,7 +3,7 @@ from PyQt5.QtGui import QTextCursor, QTextCharFormat, QTextDocument, QIcon
 from PyQt5.QtWidgets import QWidget, QPushButton, QTextBrowser, QLabel, \
     QHBoxLayout, QGridLayout, QLineEdit, QMessageBox, QApplication, QTextEdit
 
-from pyqt_resource_helper.pyqtResourceHelper import PyQtResourceHelper
+from pyqt_svg_icon_pushbutton.svgIconPushButton import SvgIconPushButton
 
 
 class FindTextWidget(QWidget):
@@ -57,10 +57,6 @@ class FindTextWidget(QWidget):
         self.__closeBtn.setShortcut('Escape')
 
         btns = [self.__prevBtn, self.__nextBtn, self.__caseBtn, self.__wordBtn, self.__regexBtn, self.__closeBtn]
-
-        PyQtResourceHelper.setStyleSheet(btns, ['style/button.css']*len(btns))
-        PyQtResourceHelper.setIcon(btns, ['ico/prev.png', 'ico/next.png', 'ico/case.png',
-                                          'ico/word.png', 'ico/regex.png', 'ico/close.png'])
 
         self.__prevBtn.setToolTip('Previous Occurrence')
         self.__nextBtn.setToolTip('Next Occurrence')

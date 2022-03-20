@@ -8,8 +8,8 @@ setup(
     license='MIT',
     packages=find_packages(),
     package_data={'pyqt_find_text_widget.style': ['button.css'],
-                  'pyqt_find_text_widget.ico': ['prev.png', 'next.png', 'case.png', 'word.png',
-                                                'regex.png', 'close.png']},
+                  'pyqt_find_text_widget.ico': ['prev.svg', 'next.svg', 'case.svg', 'word.svg',
+                                                'regex.svg', 'close.svg']},
     description='PyQt5 find text widget',
     url='https://github.com/yjg30737/pyqt-find-text-widget.git',
     install_requires=[

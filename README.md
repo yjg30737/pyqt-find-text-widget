@@ -65,7 +65,7 @@ if __name__ == "__main__":
 
 Result
 
-※ Note: Button icons in preview are obsolete.
+Note: Button icons in preview are obsolete.
 
 https://user-images.githubusercontent.com/55078043/147844492-53b355ff-801a-4fca-bbef-c37fb55d1418.mp4
 

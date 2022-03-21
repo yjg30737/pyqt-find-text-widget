@@ -27,7 +27,7 @@ I'm still working with regex feature.
 * closeSignal
 
 ## Usage
-I just give you one sweet code example
+Code Sample
 ```python
 from PyQt5.QtWidgets import QMainWindow, QApplication, QGridLayout, QWidget, QTextEdit
 from pyqt_find_text_widget.findTextWidget import FindTextWidget
@@ -62,7 +62,10 @@ if __name__ == "__main__":
     mainWindow.show()
     sys.exit(app.exec_())
 ```
-And i give you sweet result video.
+
+Result
+
+※ Note: Button icons in preview are obsolete.
 
 https://user-images.githubusercontent.com/55078043/147844492-53b355ff-801a-4fca-bbef-c37fb55d1418.mp4
 

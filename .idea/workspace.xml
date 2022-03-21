@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3deb5e5c-cfe4-4826-8592-9e5af723d95d" name="Changes" comment="Update description">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pyqt_find_text_widget/ico/word.svg" beforeDir="false" afterPath="$PROJECT_DIR$/pyqt_find_text_widget/ico/word.svg" afterDir="false" />
-    </list>
+    <list default="true" id="3deb5e5c-cfe4-4826-8592-9e5af723d95d" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -39,7 +36,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="TODO_SCOPE" value="모든 위치" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/pyqt_find_text_widget/ico" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../pyqt_find_replace_text_widget" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
@@ -323,12 +320,18 @@
       <option name="project" value="LOCAL" />
       <updated>1647767071304</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="Change word.svg icon fill color">
+      <created>1647767645646</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1647767645646</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="btn_toggled -&gt; __btnToggled" />
     <MESSAGE value="Make it work properly when nothing in the QLineEdit" />
     <MESSAGE value="Make it available to set background, foreground format of finding word on its own (not by changing QTextEdit style)" />
     <MESSAGE value="Add close button (Hide as default)" />
@@ -353,6 +356,7 @@
     <MESSAGE value="Remove style file which is not necessary anymore" />
     <MESSAGE value="Replace QPushButton with SvgIconPushButton" />
     <MESSAGE value="Update description" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update description" />
+    <MESSAGE value="Change word.svg icon fill color" />
+    <option name="LAST_COMMIT_MESSAGE" value="Change word.svg icon fill color" />
   </component>
 </project>

@@ -16,7 +16,7 @@ setup(
     packages=find_packages(),
     package_data={'pyqt_find_text_widget.ico': ['prev.svg', 'next.svg', 'case.svg', 'word.svg',
                                                 'regex.svg', 'close.svg']},
-    description='PyQt widget which is able to find text in QTextEdit/QTextBrowser',
+    description='PyQt widget which can be used to find text in QTextEdit/QTextBrowser',
     url='https://github.com/yjg30737/pyqt-find-text-widget.git',
     long_description_content_type='text/markdown',
     long_description=long_description,

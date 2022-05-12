@@ -5,9 +5,7 @@ PyQt widget which is able to find text in QTextEdit/QTextBrowser
 PyQt5 >= 5.8
 
 ## Setup
-```
-pip3 install git+https://github.com/yjg30737/pyqt-find-text-widget.git --upgrade
-```
+`python -m pip install pyqt-find-text-widget`
 
 ## Included Packages
 * <a href="https://github.com/yjg30737/pyqt-svg-icon-pushbutton.git">pyqt-svg-icon-pushbutton</a>
@@ -17,7 +15,7 @@ pip3 install git+https://github.com/yjg30737/pyqt-find-text-widget.git --upgrade
 * Match case
 * Makes find match only complete words
 * Providing prev, next, close signals
-* Enable to set close button with ```setCloseBtn(f: bool)```
+* Enable to set close button with `setCloseBtn(f: bool)`
 
 I'm still working with regex feature.
 

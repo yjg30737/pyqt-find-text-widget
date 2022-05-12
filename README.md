@@ -1,5 +1,5 @@
 # pyqt-find-text-widget
-PyQt widget which is able to find text in QTextEdit/QTextBrowser
+PyQt widget which can be used to find text in QTextEdit/QTextBrowser
 
 ## Requirements
 PyQt5 >= 5.8

@@ -1,9 +1,9 @@
 from PyQt5.QtCore import Qt, pyqtSignal
 from PyQt5.QtGui import QTextCursor, QTextCharFormat, QTextDocument
-from PyQt5.QtWidgets import QWidget, QPushButton, QTextBrowser, QLabel, \
+from PyQt5.QtWidgets import QWidget, QTextBrowser, QLabel, \
     QHBoxLayout, QGridLayout, QLineEdit, QMessageBox
 
-from pyqt_svg_icon_pushbutton.svgIconPushButton import SvgIconPushButton
+from pyqt_svg_button import SvgButton
 
 
 class FindTextWidget(QWidget):
@@ -30,10 +30,10 @@ class FindTextWidget(QWidget):
         self.__cnt_cur_idx_text = '{0}/{1}'
         self.__cnt_lbl = QLabel(self.__cnt_init_text.format(0))
 
-        self.__prevBtn = SvgIconPushButton()
+        self.__prevBtn = SvgButton()
         self.__prevBtn.setIcon('ico/prev.svg')
 
-        self.__nextBtn = SvgIconPushButton()
+        self.__nextBtn = SvgButton()
         self.__nextBtn.setShortcut('Enter')
         self.__nextBtn.setIcon('ico/next.svg')
 
@@ -42,21 +42,21 @@ class FindTextWidget(QWidget):
 
         self.__btnToggled(False)
 
-        self.__caseBtn = SvgIconPushButton()
+        self.__caseBtn = SvgButton()
         self.__caseBtn.setCheckable(True)
         self.__caseBtn.toggled.connect(self.__caseToggled)
         self.__caseBtn.setIcon('ico/case.svg')
 
-        self.__wordBtn = SvgIconPushButton()
+        self.__wordBtn = SvgButton()
         self.__wordBtn.setCheckable(True)
         self.__wordBtn.toggled.connect(self.__wordToggled)
         self.__wordBtn.setIcon('ico/word.svg')
 
-        self.__regexBtn = SvgIconPushButton()
+        self.__regexBtn = SvgButton()
         self.__regexBtn.setCheckable(True)
         self.__regexBtn.setIcon('ico/regex.svg')
 
-        self.__closeBtn = SvgIconPushButton()
+        self.__closeBtn = SvgButton()
         self.__closeBtn.setVisible(False)
         self.__closeBtn.clicked.connect(self.close)
         self.__closeBtn.setShortcut('Escape')

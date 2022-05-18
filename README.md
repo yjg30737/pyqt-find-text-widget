@@ -8,7 +8,7 @@ PyQt5 >= 5.8
 `python -m pip install pyqt-find-text-widget`
 
 ## Included Packages
-* <a href="https://github.com/yjg30737/pyqt-svg-icon-pushbutton.git">pyqt-svg-icon-pushbutton</a>
+* <a href="https://github.com/yjg30737/pyqt-svg-button.git">pyqt-svg-button</a>
 
 ## Feature
 * Find previous, next occurence based on text cursor's position
